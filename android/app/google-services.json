@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "579104837711",
+    "firebase_url": "https://inshot-7de89-default-rtdb.firebaseio.com",
+    "project_id": "inshot-7de89",
+    "storage_bucket": "inshot-7de89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579104837711:android:c47c3b0dd35dcbe44c1a3a",
+        "android_client_info": {
+          "package_name": "com.example.inshot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579104837711-k9htc0hm4es1hp5kcl8feggl3bhkgl89.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZl_IFdIBLX-PlN80JIUSyynUmdmhQjYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579104837711-k9htc0hm4es1hp5kcl8feggl3bhkgl89.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
