@@ -1,5 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:inshot/screens/video_player.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -11,7 +12,7 @@ class RecordVid extends StatefulWidget {
   State<RecordVid> createState() => _RecordVidState();
 }
 
-late String path;
+late String videoPath;
 
 class _RecordVidState extends State<RecordVid> {
   late CameraController _controller;
@@ -62,10 +63,12 @@ class _RecordVidState extends State<RecordVid> {
                             try {
                               await _initializeControllerFuture;
 
-                              path = join(
+                              videoPath = join(
                                   (await getApplicationDocumentsDirectory())
                                       .path,
                                   '${DateTime.now()}.mp4');
+                              // ignore: use_build_context_synchronously
+
                               setState(() {
                                 _controller.startVideoRecording();
                                 isDisabled = true;
@@ -94,6 +97,13 @@ class _RecordVidState extends State<RecordVid> {
                                 _controller.stopVideoRecording();
                                 isDisabled = false;
                                 isDisabled = !isDisabled;
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        VideoApp(filePath: videoPath),
+                                  ),
+                                );
                               }
                             });
                           },

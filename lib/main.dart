@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:inshot/screens/login_otp.dart';
 import 'package:inshot/screens/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:inshot/screens/video_player.dart';
 import 'package:inshot/screens/video_record.dart';
+import 'package:path/path.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +28,9 @@ void main() async {
       '/third': (context) => RecordVid(
             camera: cameras.first,
           ),
+      '/fourth': (context) => const VideoApp(
+            filePath: 'videoPath',
+          )
     },
   ));
 }
